@@ -1,3 +1,23 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-title>Films Menu</ion-title>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <ion-list-header>UK Films</ion-list-header>
+            <ion-item>Film 1</ion-item>
+            <ion-item>Film 2</ion-item>
+
+            <ion-list-header>US Films</ion-list-header>
+            <ion-item>Film 3</ion-item>
+            <ion-item>Film 4</ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
