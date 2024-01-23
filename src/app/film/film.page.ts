@@ -7,10 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./film.page.scss'],
 })
 export class FilmPage implements OnInit {
-  private id!: string;
+  public id!: string;
   public title!: string;
-  private dir!: string;
-  private rating!: string;
+  public dir!: string;
+  public rating!: string;
+  public img!: string;
 
   constructor(private route: ActivatedRoute) {
     this.route.queryParams.subscribe((data) => {
@@ -18,6 +19,7 @@ export class FilmPage implements OnInit {
       this.title = data['film'].title;
       this.dir = data['film'].dir;
       this.rating = data['film'].rating;
+      this.img = data['film'].img;
     });
   }
 

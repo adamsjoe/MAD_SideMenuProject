@@ -7,4 +7,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-card class="ion-padding">
+    <ion-img [src]="img"></ion-img>
+    <!-- <ion-card-title>About "{{ title }}"</ion-card-title> -->
+
+    <ion-card-content>
+      Director: {{dir }} <br />
+      Age Rating: {{ rating}} <br />
+    </ion-card-content>
+  </ion-card>
+</ion-content>
