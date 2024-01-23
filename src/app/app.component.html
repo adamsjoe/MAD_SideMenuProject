@@ -7,9 +7,7 @@
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let film of films">
-            <ion-item (click)="showFilm(film.id, film.title)">{{
-              film.title
-            }}</ion-item>
+            <ion-item (click)="showFilm(film)">{{ film.title }}</ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>

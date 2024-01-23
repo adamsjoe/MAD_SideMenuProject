@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +35,14 @@ export class AppComponent {
     },
   ];
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
 
-  showFilm(id: string, title: string) {
-    console.log(id, title);
+  showFilm(film: any) {
+    const navExtra: NavigationExtras = {
+      queryParams: {
+        film,
+      },
+    };
+    this.navCtrl.navigateForward('film', navExtra);
   }
 }
