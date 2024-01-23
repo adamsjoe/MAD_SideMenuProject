@@ -6,14 +6,10 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-menu-toggle auto-hide="false">
-            <ion-list-header>UK Films</ion-list-header>
-            <ion-item>Film 1</ion-item>
-            <ion-item>Film 2</ion-item>
-
-            <ion-list-header>US Films</ion-list-header>
-            <ion-item>Film 3</ion-item>
-            <ion-item>Film 4</ion-item>
+          <ion-menu-toggle auto-hide="false" *ngFor="let film of films">
+            <ion-item (click)="showFilm(film.id, film.title)">{{
+              film.title
+            }}</ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
